@@ -21,7 +21,8 @@ app.use(methodOverride('_method'));
 app.use(express.static("public"))
 
 // Routes / Controller
-
+const flowerController = require('./controllers/flowerbox.js');
+app.use('/flower', flowerController)
 
 // Listener
 app.listen(PORT, () => {
